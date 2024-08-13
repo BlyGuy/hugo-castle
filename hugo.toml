@@ -1,0 +1,26 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[params]
+    siteRepo = 'https://github.com/yourusername/sitename/'
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/blog'
+weight = 10
+
+[[menus.main]]
+name = 'Contact'
+pageRef = '/contact.html'
+weight = 29
+
+[[menus.main]]
+name = 'Credits'
+pageRef = '/credits.html'
+weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

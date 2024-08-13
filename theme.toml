@@ -1,0 +1,19 @@
+name = 'Marc Style'
+license = 'MIT'
+licenselink = 'https://github.com/BlyGuy/marchoek.nl/LICENSE'
+description = 'Hugo style for my personal website'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/BlyGuy/marchoek.nl'
+
+# If you have a running demo of the theme
+demosite = 'https://marchoek.nl'
+
+# Taxonomy terms
+tags = ['Personal']
+features = ['Doors', 'NoJS']
+
+# The theme has a single author
+[author]
+  name = 'Marc Hoek'
+  homepage = 'https://marchoek.nl'

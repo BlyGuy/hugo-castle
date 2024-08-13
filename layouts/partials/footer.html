@@ -1,0 +1,10 @@
+<p>
+    Site last modified on
+    {{ $dateMachine := site.LastChange | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := site.LastChange | time.Format ":date_long" }}
+    <time style="font-family: inherit;" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>.
+</p>
+<p>
+    Please report any issues on
+    <a href="{{ site.Params.siteRepo }}">Github</a>.
+</p>

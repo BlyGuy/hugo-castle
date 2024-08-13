@@ -19,7 +19,7 @@ git submodule add --depth=1 https://github.com/BlyGuy/hugo-castle.git themes/hug
 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
 ```
 
-Now add `theme = 'marc_style'` to your `hugo.toml` in the root directory of your hugo site.
+Now add `theme = 'hugo-castle'` to your `hugo.toml` in the root directory of your hugo site.
 
 ## Updating
 

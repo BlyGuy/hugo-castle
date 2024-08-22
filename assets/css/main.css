@@ -51,7 +51,7 @@ body {
 
 main {
     background-color: #0c011f;
-    max-width: 800px;
+    max-width: 55em;
     margin: auto;
     padding: 1ch 1ch 1ch 1ch;
     line-height: 1.5;
@@ -69,33 +69,35 @@ main {
     border-width: 8px;
     border-color: #666;
     border-style: groove;
-    /* Add torches + red shadow to title */
-    h1 { text-shadow: 2px 2px #500; }
-    h1::before { content: url(/torch.gif); float: left; }
-    h1::after  { content: url(/torch.gif); float: right; }
 }
+
+/* Add torches + red shadow to title */
+.page-title h1 { text-shadow: 2px 2px #500; }
+.page-title h1::before { content: url(/torch.gif); float: left; }
+.page-title h1::after  { content: url(/torch.gif); float: right; }
 
 /* Header + navbar and Footer */
 header {
     border-bottom: 1px solid #222;
-    /* Rainbow Site Title */
-    h1 {
-        color: red;
-        background-color: black;
-        margin: 0;
-        font-size: 2.5em;
-    }
-    h1:hover { animation: rainbow 5s infinite; }
 }
 
+/* Rainbow Site Title */
+header h1 {
+    color: red;
+    background-color: black;
+    margin: 0;
+    font-size: 2.5em;
+}
+header h1:hover, header h1:active { animation: rainbow 5s infinite; }
+
+/* Nav-bar with space inbetween links */
 nav {
     background-color: #520808;
     font-family: 'Chakra Petch', monospace;
     font-size: medium;
     text-align: center;
-    /* Create space between links */
-    a { margin: 0 4px 0 4px; }
 }
+nav a { margin: 0 4px 0 4px; }
 
 footer {
     background: linear-gradient(#222, black);
@@ -126,7 +128,7 @@ a {
     color: rgb(122, 107, 192);
     text-decoration: none;
 }
-a:hover {
+a:hover, a:active {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -152,20 +154,19 @@ time {
 
 /* Images */
 
-img { max-width: 800px; }
+img { max-width: 100% }
 
 figure {
     display: block;
     margin: auto;
     padding: 1ch;
-    max-width: min-content;
+    max-width: fit-content;
     clear: both;
     text-align: center;
-    /* Frame around image */
-    img {
-        border: 10px ridge black;
-        border-radius: 1ch;
-    }
+}
+figure img { /* frame around figure */
+    border: 10px ridge black;
+    border-radius: 1ch;
 }
 
 figcaption {
@@ -178,14 +179,10 @@ figcaption {
     border-radius: 10px;
 }
 
-.title-figure {
-    img { border-color: goldenrod; }
-    figcaption { border-color: darkred; }
-}
+.title-figure img { border-color: goldenrod; }
+.title-figure figcaption { border-color: darkred; }
 
-.icon { /* For custom emoticons */
-    height: 1em;
-}
+.icon { height: 1em; } /* For custom emoticons */
 
 /* Arrays of doors,
 Each door an <a> with <h2> and <img> inside */
@@ -195,14 +192,14 @@ Each door an <a> with <h2> and <img> inside */
     justify-content: space-evenly;
     color: grey;
     text-align: center;
-    /* Main door sprite functionality */
-    img {
-        width: 10ch;
-        margin: 0 1em 0 1em;
-        content: url("/door1.png");
-    }
-    img:hover { content: url(/door2.png); }
 }
+/* Main door sprite functionality */
+.doors img {
+    width: 10ch;
+    margin: 0 1em 0 1em;
+    content: url("/door1.png");
+}
+.doors img:hover, .doors img:active { content: url(/door2.png); }
 
 .rainbow { animation: rainbow 5s infinite; }
 

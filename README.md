@@ -8,7 +8,7 @@ That site also serves as an example for the theme.
 
 * Just HTML/CSS
 * Doors
-* (Kinda) *Mediaeval* Interior by default
+* *Medieval* Theming by default
 
 ## Installation
 

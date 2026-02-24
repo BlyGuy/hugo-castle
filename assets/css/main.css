@@ -59,17 +59,23 @@ header {
     text-align: center;
 }
 
-/* Rainbow Site Title */
+/* Site title with torches and rainbow */
 header h1 {
     color: red;
     text-shadow: 2px 2px #500;
     margin: 0;
     font-size: 2.5em;
 }
-header h1::before, header h1::after { 
-    display: inline-flex;
-    content: url(/torch.gif);
+header h1::before,
+header h1::after {
+    display: inline-block;
+    content: '';
+    background-image: url(/torch.gif);
     height: 1em;
+    aspect-ratio: 1 / 2; /* aspect ratio of torch */
+    background-size: contain;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    vertical-align: middle;
 }
 header h1:hover, header h1:active { animation: rainbow 5s infinite; }
 
@@ -92,19 +98,25 @@ footer {
 .page-title {
     background: linear-gradient(black, #200, black);
     color: red;
-    font-size: 1.5em;
     border: 8px #600 groove;
 }
 /* Add torches + red shadow to title */
 .page-title h1 {
-    text-shadow: 2px 2px #500;
     display: flex;
     justify-content: space-around;
+    font-size: 3em;
+    text-shadow: 2px 2px #500;
 }
-.page-title h1::before, .page-title h1::after {
-    display: inline-flex;
-    content: url(/torch_big.gif);
+
+.page-title h1::before,
+.page-title h1::after {
+    display: inline-block;
+    content: '';
+    background-image: url(/torch_big.gif);
     height: 1.5em;
+    aspect-ratio: 57 / 125; /* aspect ratio of big torch */
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Headings need to be fancy */
@@ -112,7 +124,7 @@ h1, h2, h3, h4 { font-family: 'Goudy', monospace; }
 h1, h2, h3 { text-shadow: 2px 2px #221a30; }
 h1 { text-align: center; }
 
-/* Other common tags */
+/* Links */
 a {
     color: #b3a3f9;
     text-decoration: none;
@@ -123,6 +135,7 @@ a:hover, a:active {
     color: #d8b5ff;
 }
 
+/* Tables */
 table {
     width: 100%;
     text-align: center;
@@ -158,12 +171,14 @@ figure {
     image-rendering: auto;
     display: block;
     margin: 1ch auto;
-    max-width: 50%;
+    width: fit-content;
     clear: both;
     text-align: center;
 }
 figure img {
     display: block;
+    margin: auto;
+    max-height: 50vh;
 }
 
 figcaption {
@@ -172,9 +187,10 @@ figcaption {
     text-align: center;
     font-style: italic;
     line-height: 1em;
+    margin: 1ch auto auto auto;
     border: 4px ridge grey;
     border-radius: 1ch;
-    margin-top: 1ch;
+    padding: 0 1ch;
 }
 
 /* Classes for framed figures */

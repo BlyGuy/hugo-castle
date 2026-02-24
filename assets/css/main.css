@@ -37,6 +37,7 @@ body {
     background-image: url(/background.png);
     background-repeat: repeat;
     background-size: 256px;
+    background-position: top;
     padding: 1rem 0;
 }
 
@@ -173,7 +174,6 @@ figure {
     margin: 1ch auto;
     width: fit-content;
     clear: both;
-    text-align: center;
 }
 figure img {
     display: block;

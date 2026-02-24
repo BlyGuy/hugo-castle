@@ -39,14 +39,7 @@ Renders door-links for the given menu ID.
       {{- end -}}
     >
         <h2>{{ $name }}</h2>
-        <img>
+        <img alt="{{ $name }} door">
     </a>
-    {{- with .Children }}
-      {{/*
-      <ul>
-        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-      </ul> 
-      */}}
-    {{- end }}
   {{- end }}
 {{- end }}
